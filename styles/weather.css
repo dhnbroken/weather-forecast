@@ -1,0 +1,123 @@
+body {
+  background-color: #0b131e;
+  font-family: 'Rubik', sans-serif;
+}
+/* Custom common */
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.btn:focus,
+.btn:active {
+  outline: none !important;
+  box-shadow: none;
+  border: none !important;
+}
+
+hr {
+  margin: 12px auto;
+  width: 90%;
+  height: 1px;
+  background-color: rgb(53, 69, 94);
+  border-radius: 2px;
+  opacity: 1;
+}
+
+.w-7 {
+  width: 7%;
+}
+
+.w-16 {
+  width: 16% !important;
+}
+
+.lh-1-6 {
+  line-height: 1.6;
+}
+
+.h-22 {
+  height: 22%;
+}
+
+.h-23 {
+  height: 23%;
+}
+
+/* Main */
+.parent {
+  display: grid;
+  grid-template-columns: 7% 28% 25% 20% 20%;
+  grid-template-rows: 3% 28.5% 28.5% 28.5%;
+  gap: 18px 24px;
+  grid-auto-flow: row;
+}
+
+.sidebar {
+  grid-area: 1 / 1 / 5 / 2;
+}
+
+.forecast {
+  grid-area: 2 / 4 / 5 / 6;
+}
+
+.searchbar {
+  grid-area: 1 / 2 / 2 / 4;
+}
+
+.info {
+  grid-area: 2 / 2 / 3 / 4;
+}
+
+.today {
+  grid-area: 3 / 2 / 4 / 4;
+}
+
+.air-condition {
+  grid-area: 4 / 2 / 5 / 4;
+}
+
+.details {
+  grid-area: 3 / 2 / 5 / 4;
+}
+
+.cities {
+  grid-area: 2 / 2 / 5 / 4;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+  width: 94px;
+}
+#query {
+  width: 100%;
+  display: block;
+  outline: none;
+  height: 48px;
+  color: rgb(221, 224, 228);
+  font-family: Rubik;
+  font-size: 14px;
+  letter-spacing: 0px;
+  text-align: left;
+  line-height: 48px;
+  padding: 0px 10px;
+  border-radius: 12px;
+  pointer-events: auto;
+}
+.info {
+  max-height: 335px;
+}
+
+.card-custom {
+  background-color: rgb(32, 43, 59);
+  border-radius: 24px;
+  opacity: 1;
+  border: 0px;
+}
+
+.card-active {
+  background-color: rgba(11, 19, 30, 0);
+  border: 2px solid rgb(4, 97, 165);
+}

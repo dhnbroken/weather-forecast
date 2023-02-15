@@ -1,0 +1,56 @@
+@media (max-width: 768px) {
+  .w-45 {
+    width: 45% !important;
+  }
+}
+@media (min-width: 768px) {
+  .w-md-80 {
+    width: 80% !important;
+  }
+  .w-md-50 {
+    width: 50% !important;
+  }
+  .w-50-calc {
+    width: calc(50% - 16px) !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199.98px) {
+  .parent {
+    display: grid;
+    grid-template-columns: 28% 25% 20% 20%;
+  }
+
+  .forecast {
+    grid-area: 2 / 3 / 5 / 5;
+    margin-top: 30px;
+  }
+
+  .searchbar {
+    grid-area: 1 / 3 / 2 / 5;
+  }
+
+  .info {
+    grid-area: 2 / 1 / 3 / 3;
+  }
+
+  .today {
+    grid-area: 3 / 1 / 4 / 3;
+  }
+
+  .air-condition {
+    grid-area: 4 / 1 / 5 / 3;
+  }
+
+  .details {
+    grid-area: 3 / 1 / 5 / 3;
+  }
+
+  .cities {
+    grid-area: 2 / 1 / 5 / 3;
+  }
+
+  .menu {
+    grid-area: 1 / 1 / 2 / 3;
+  }
+}
