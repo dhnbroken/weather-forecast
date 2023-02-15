@@ -5,20 +5,28 @@ const infoSection = document.querySelector('.info');
 const detailsSection = document.querySelector('.details');
 const moreBtn = document.getElementById('more-btn');
 
-const routerWeather = () => {
-  infoSection.classList.remove('d-none');
-  todaySection.classList.remove('d-none');
-  airCondition.classList.remove('d-none');
-  detailsSection.classList.add('d-none');
-  citiesSection.classList.add('d-none');
-};
+const router = (name) => {
+  let cities = document.querySelector('.cities-btn');
+  let weather = document.querySelector('.weather-btn');
+  if (name === 'weather') {
+    infoSection.classList.remove('d-none');
+    todaySection.classList.remove('d-none');
+    airCondition.classList.remove('d-none');
+    detailsSection.classList.add('d-none');
+    citiesSection.classList.add('d-none');
 
-const routerCities = () => {
-  infoSection.classList.add('d-none');
-  todaySection.classList.add('d-none');
-  airCondition.classList.add('d-none');
-  detailsSection.classList.add('d-none');
-  citiesSection.classList.remove('d-none');
+    weather.classList.add('text-white');
+    cities.classList.remove('text-white');
+  } else if (name === 'cities') {
+    infoSection.classList.add('d-none');
+    todaySection.classList.add('d-none');
+    airCondition.classList.add('d-none');
+    detailsSection.classList.add('d-none');
+    citiesSection.classList.remove('d-none');
+
+    cities.classList.add('text-white');
+    weather.classList.remove('text-white');
+  }
 };
 
 moreBtn.addEventListener('click', () => {
@@ -66,6 +74,21 @@ const displayCurrentChanged = (cur) => {
   Array.from(uvIndex).map((item) => {
     item.innerHTML = cur.current?.uv;
   });
+};
+
+const displayBtn = (div) => {
+  div.innerHTML += `<button onclick="router('weather')" class="btn text-secondary text-white border-0 weather-btn">
+  <div class="text-center cursor-pointer">
+    <i class="fa-solid fa-cloud"></i>
+    <p>Weather</p>
+  </div>
+</button>
+<button onclick="router('cities')" class="btn text-secondary border-0 cities-btn">
+  <div class="text-center cursor-pointer">
+    <i class="fa-solid fa-city"></i>
+    <p>Cities</p>
+  </div>
+</button>`;
 };
 
 const displayForecastChange = (fc) => {

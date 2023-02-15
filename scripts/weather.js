@@ -7,6 +7,9 @@ import {
 
 const query = document.getElementById('query');
 const searchForm = document.getElementById('search-form');
+const menu = document.querySelector('.menu');
+const sidebar = document.querySelector('.sidebar');
+
 let todayDetails = document.getElementById('today-details');
 
 let forecast = document.getElementById('forecast-7');
@@ -18,6 +21,8 @@ window.addEventListener('load', () => {
   getCurrentInfo(displayCurrentChanged, q);
   getForecastToday(todayDetails, q, 1);
   getForecastWeek(forecast, q, 7);
+  displayBtn(sidebar);
+  displayBtn(menu);
 });
 
 query.addEventListener('change', (e) => {
