@@ -9,11 +9,17 @@ export const getCurrentInfo = async (func, q) => {
   }
 };
 
-export const getForecastToday = async (q, days) => {
+export const getForecastToday = async (divtd, q, days) => {
   try {
     const res = await getForecast(q, days);
     let today = res.forecastday[0];
     displayForecastChange(today);
+    displayTodayForecast(divtd, today, 6);
+    displayTodayForecast(divtd, today, 9);
+    displayTodayForecast(divtd, today, 12);
+    displayTodayForecast(divtd, today, 15);
+    displayTodayForecast(divtd, today, 18);
+    displayTodayForecast(divtd, today, 21);
   } catch (err) {
     console.log(err);
   }

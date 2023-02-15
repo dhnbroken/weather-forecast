@@ -7,6 +7,7 @@ import {
 
 const query = document.getElementById('query');
 const searchForm = document.getElementById('search-form');
+let todayDetails = document.getElementById('today-details');
 
 let forecast = document.getElementById('forecast-7');
 let today = new Date();
@@ -15,7 +16,7 @@ let q = 'Ho Chi Minh';
 
 window.addEventListener('load', () => {
   getCurrentInfo(displayCurrentChanged, q);
-  getForecastToday(q, 1);
+  getForecastToday(todayDetails, q, 1);
   getForecastWeek(forecast, q, 7);
 });
 
