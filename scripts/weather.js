@@ -19,8 +19,10 @@ let q = 'Ho Chi Minh';
 
 window.addEventListener('load', () => {
   getCurrentInfo(displayCurrentChanged, q);
+  getCurrentInfo(displayInfo, q);
   getForecastToday(todayDetails, q, 1);
   getForecastWeek(forecast, q, 7);
+
   displayBtn(sidebar);
   displayBtn(menu);
 });

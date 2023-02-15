@@ -91,6 +91,31 @@ const displayBtn = (div) => {
 </button>`;
 };
 
+const displayInfo = (cur) => {
+  infoSection.innerHTML = `<div
+  class="d-flex justify-content-between align-items-center h-100 flex-column-reverse text-center text-md-start flex-md-row"
+>
+  <div
+    class="d-flex flex-column justify-content-between h-50 gap-3 p-3"
+  >
+    <div>
+      <h3 id="city-name" class="text-white">${cur.location?.name}</h3>
+      Change of rain: <span class="rain-chance">0%</span>
+    </div>
+    <h3 id="city-temp" class="text-white fs-1">${cur.current?.temp_c}&deg;</h3>
+  </div>
+  <div>
+    <img
+      src=${cur.current?.condition?.icon}
+      alt=""
+      class="pt-4"
+      id="city-temp-img"
+      width="140"
+    />
+  </div>
+</div>`;
+};
+
 const displayForecastChange = (fc) => {
   let todayChanceRain = document.getElementsByClassName('rain-chance');
 
