@@ -25,11 +25,13 @@ query.addEventListener('change', (e) => {
 });
 
 searchForm.addEventListener('submit', (e) => {
+  todayDetails.innerHTML = '';
   e.preventDefault();
   getCurrentInfo(displayCurrentChanged, q);
   getForecastToday(q, 1);
   getForecastWeek(forecast, q, 7);
   getAstronomyForecast(q, moment(today).format('yyyy-MM-DD'));
+  getForecastToday(todayDetails, q, 1);
   query.value = '';
   query.focus();
 });

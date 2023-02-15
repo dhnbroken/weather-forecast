@@ -58,7 +58,6 @@ const displayCurrentChanged = (cur) => {
   cloud.innerHTML = `${cur?.current?.cloud} %`;
 
   Array.from(realFeel).map((item) => {
-    console.log(cur.current?.feelslike_c);
     item.innerHTML = `${cur.current?.feelslike_c}&deg;`;
   });
   Array.from(wind).map((item) => {
@@ -117,4 +116,27 @@ const displayAstro = (dt) => {
 
   sunrise.innerHTML = dt?.astro?.sunrise;
   sunset.innerHTML = dt?.astro?.sunset;
+};
+
+const displayCities = (city) => {
+  citiesSection.innerHTML += `<div class="card-custom h-23">
+  <div
+    class="p-3 px-4 d-flex align-items-center justify-content-between"
+  >
+    <div class="w-16">
+      <img
+        src=${city.current?.condition?.icon}
+        alt=""
+        width="90"
+      />
+    </div>
+    <div class="w-75">
+      <h4 class="text-white">
+        ${city.location?.name}
+      </h4>
+      <p>${moment(city.location?.localtime).format('HH:mm')}</p>
+    </div>
+    <h3 class="text-white w-7">${city.current?.temp_c}&deg;</h3>
+  </div>
+</div>`;
 };
