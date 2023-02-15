@@ -13,7 +13,6 @@ It is also possible to predict the weather of the location for the next 7 days
 
 ![image](https://user-images.githubusercontent.com/60854411/218968609-cd4bfab0-c86a-427c-9146-56f795e6c05a.png)
 
-Responsive: 
 ![image](https://user-images.githubusercontent.com/60854411/218968819-d03e3093-b83b-44f3-92fb-aaf19b740086.png)
 
 ![image](https://user-images.githubusercontent.com/60854411/218968718-f7434346-0a3e-4596-a40b-2d921b5b6d17.png)
